@@ -1,0 +1,41 @@
+extends layout
+block data
+  -
+    var content = {
+    o_mne:{ order: [1,0], data: [
+    {name: "O MNĚ", type: "txt", id: "o_mne", text: "Dobrý den, jmenuji se Vojtěch Gaďurek a baví mě matematika a to jako ona samotná tak i její doučovaní. V součastnosti jsem studentem oktávy pražského gymnázia PORG. Příštím rokem bych rád zamířil na MATFYZ. Velkou část prázdnin trávím, jako vedoucí ná táborech."},
+    { type:"img", src: "images/dlazka.png"}
+    ]
+    },
+    co_doucuji: {order: [0], data: [
+    {name: "CO DOUČUJI?", type:"list", id: "co_doucuji", list: ["Příprava na příjmačky", "Fyziku, chemii, matematiku pro druhý stupeň", "Středoškolskou matematiku", "Středoškolskou fyziku", "Středoškolské chemické názvosloví a příklady"], prefix: "", sufix: ""}
+    ]
+    },
+    douc_prubeh: {
+    order: [0], data: [
+    {name: "JAK DOUČOVÁNÍ PROBÍHÁ?", type:"txt", id: "douc_prubeh", text: "Matematiku je potřeba si napočítat, proto v hodinách počítame, co nejvíce, obdobně je to s názvoslovím v chemii. To je potřeba si zažít. V matematice často platí, že špatná znalost základních kupeckých počtů (pomalé sčítaní, násobení, dělení) je také častým zdrojem problémů. Hodina je 60 minut. "}
+    ]
+    },
+    skype_osob: {order: [0], data: [
+    {name: "SKYPE NEBO OSOBNÍ HODINA?", type:"txt", id: "skype_nebo_osobni_hodina", text: "Osobně mám raději osobní hodiny, u nich je výhoda osobního kontaktu a také vidím celou dobu studentovi pod ruce. Je tedy pro mě snaží zjistit, co je problém a jak ho vyřešit. Výhoda hodiny přes internet je větší variibilita a nižší cena. Je možné se domluvit na poslední chvíli. Je také možno využít asynchroního doučovaní, ve kterém se domluvíme na čase a příkladech. Student se připojuje pouze na vysvětlení, když se zasekne. Po vysvětelní se zase odpojí. Účtuji si pouze čistý čas, kdy mluvím. Je tedy možno ušetřit na čase, kdy si student pouze počítá příklady."}
+    ]
+    },
+    cenik: {order: [0], data: [
+    {name: "CENÍK", type:"list", id: "cennik", list: ["Osobní hodina - 400 Kč/hod", "Hodina přes internet - 300 Kč/hod", "Asynchroní hodina - 500 Kč/hod", "Pomoc s výpočtem příkladů - 400 Kč/hod"], prefix: "", sufix: "Hodina je 60 minut."}
+    ]
+    },
+    recenze: {order: [0], data: [
+    {name: "RECENZE", type:"bold-list", id: "recenze", list: [{name: "Iveta Č.", text: "Vojta je skvělý, zvládá matiku, fyziku i chemii. Je velice ochotný, spolehlivý a flexibilní. 100% doporučuji. - 3. 11. 2020"},  {name: "Michaela J", text: "Vojta je super \"učitel\". Látku jednoduše a názorně vysvětlí. Je spolehlivý. Moc mi pomohl jak v matematice a fyzice, tak i při chemii. Mohu jen doporučit 👍 - 4. 2. 2020 "}, {name: "Pavla H.", text: "Danovi jste na jaře velmi pomohl, děkuji. 24. 11. 2020"},{name: "Anonymni rodic", text: "Díky skvělé zkušenosti se na vás znova obracím o pomoc 10.1.2021"} ], prefix: "vyber", sufix: "faktborec"}
+    ]
+    },
+    kontakt: {order: [0], data: [
+    {name: "KONTAKT", type:"bold-list", id: "kontakt", list: [{name: "TELEFON", text: "733 274 061"},  {name: "EMAIL", text: "gadurekvojtech@outlook.com"} ], prefix: "vyber", sufix: "faktborec"}
+    ],
+    }
+    };
+    var order_content = [
+    "o_mne", "co_doucuji", "douc_prubeh", "skype_osob", "cenik", "recenze", "kontakt"
+    ];
+    var page_settings = {
+      status: "main_page"
+    }

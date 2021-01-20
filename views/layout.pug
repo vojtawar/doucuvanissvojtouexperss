@@ -1,0 +1,58 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/navbar.css')
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        script(src="/javascripts/index-content.js")
+        <style> @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+        </style>
+        include style
+        block data
+    body
+        header
+            div(id = "header_text")
+                h1 DOUČOVANI S VOJTOU.eu
+        div(class="nav")
+            ul(class = "navbar" id="navbar")
+                each row in order_content
+                    each order in content[row].order
+                        -var item = content[row].data[order]
+                        if (item.type == "txt" || "list" || "bold-list")
+                            li(class = "navbar")
+                                a(href="#" + item.id class = "navbar")= item.name
+                if (page_settings.status == "ussual_page")
+                    li.navbar
+                        a(href="/" class="navbar") ZPET
+
+        article
+            each row in order_content
+                div(class = "flex-container")
+                    each order in content[row].order
+                        -var item = content[row].data[order]
+                        if (item.type == "img")
+                            div(class = "inner-flex-container" style = "flex-grow: 1")
+                                img(src = item.src style = "{maxwidth: 800px}")
+                        else if (item.type == "list")
+                            div(class= "inner-flex-container", id = item.id)
+                                a(href=item.id)
+                                    h1= item.name
+                                    p= item.prefix
+                                    ul(class = "text-list")
+                                each point in item.list
+                                    li(class = "text-list")= point
+                                p= item.sufix
+                        else if (item.type == "bold-list")
+                            div(class="inner-flex-container", id = item.id)
+                                h1= item.name
+                                ul(class= "text-list")
+                                each point in item.list
+                                    li(class = "rew-list")= point.name
+                                    span(class = "rew-list")= point.text
+                        else
+                            div(class = "inner-flex-container", id = item.id, href = item.id)
+                                a(href=item.id)
+                                    h1= item.name
+                                    p= item.text
+

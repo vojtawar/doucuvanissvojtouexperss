@@ -1,0 +1,34 @@
+extends layout
+block data
+    -
+     var content = {
+     kdo_jsem:{
+     order: [1,0], data: [
+     {name: "KDO JSEM", type: "txt", id: "kdo_jsem", text: "Dobrý den, jmenuji se Vojtěch Gaďurek. Bydlím a studuji v Praze na gymnáziu PORG. Mám rád dobré jídlo a humor. Rád is ve volném čase čtu a občas něco napíšu."},
+     { type:"img", src: "images/ja02.png"}
+     ]
+     },
+     co_me_bavi:{
+     order: [0,1], data: [
+     {name: "CO MĚ BAVÍ", type: "list", id: "co_me_bavi", list: ["Matematika", "Počítače", "Lakros"], prefix: "Již odmala mě velmi bavilo objevovat nové věci, ale větší uspokojení jsem vždy nacházel ve sdílení svých znalostí.", sufix: "a hlavně vedoucování na táborech :)"},
+     { type:"img", src: "images/ja02.png"}
+     ]
+     },
+     me_zkusenosti:{
+     order: [0], data: [
+     {name: "MÉ ZKUŠENOSTI", type: "list", id: "me_zkusenosti", list: ["Doučuji už víc jak dva roky", "Desítky spokojených rodičů a studentů", "Více jak pět  víc zkušeností práce s dětmi", "I na nich se mnou byli spokojeny stovky účastníků a všichni hlavní vedoucí"]},
+     ]
+     },
+     zaujal_jsem_vas:{
+     order: [0], data: [
+     {name: "ZAUJAL JSEM VÁS?", type: "list", id: "zaujal_jsem_vas", list: ["Můžete mi zavolat na 733 274 061", "Můžete mi napsat na mail gadurekvojtech@outlook.com", "A nebo mi můžete zanechat kontakt ve formuláři zde"], prefix: "Jestli jsem vás zaujal...", sufix:"Těším se na hodinu s vámi či s vaším dítětem :)"}
+     ]
+     },
+     };
+
+     var order_content = [
+             "kdo_jsem", "co_me_bavi", "me_zkusenosti", "zaujal_jsem_vas"
+     ];
+     var page_settings = {
+     status: "ussual_page"
+     }

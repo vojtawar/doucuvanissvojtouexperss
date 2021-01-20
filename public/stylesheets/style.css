@@ -1,0 +1,80 @@
+*{
+  font-family: "Open Sans";
+}
+a {
+  text-decoration: none;
+  color: #111111;
+}
+li.rew-list {
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  list-style-type: none;
+  padding-bottom: 0.5em;
+  font-weight: bold;
+}
+span.rew-list {
+  font-style: italic;
+  padding-left: 1.5em;
+  font-weight: lighter;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+article{
+  padding-left: 3%;
+  padding-right: 3%;
+  align-self: center;
+  margin: auto;
+  padding-top: 10px;
+}
+header{
+  text-align: center;
+  color: white;
+  background-color: darkturquoise;
+  padding-top: 25px;
+  padding-bottom: 5px;
+  font-size: 200%;
+
+}
+#header_text{
+  font-family: "Oswald", sans-serif;
+  font-weight: Bold;
+}
+.inner-flex-container {
+  padding-right: 5px;
+  padding-left: 5px;
+  float: left;
+  flex-grow: 2;
+  display: block;
+}
+h1{
+  font-family: Oswald;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  font-size: 2em;
+}
+h1 + p {
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  display: block;
+
+}
+.inner-flex-container:hover{
+  background-color: lightgray;
+
+}
+ul.text-list {
+  list-style-type: square;
+}
+li.text-list {
+  list-style-type: square;
+  font-size: 1.5em;
+}
